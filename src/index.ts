@@ -4,6 +4,7 @@ const binance = new Binance().options({
     APISECRET: process.env.API_SECRET,
 });
 async function main() {
+    console.log("get future prices");
     console.info(await binance.futuresPrices());
 }
 

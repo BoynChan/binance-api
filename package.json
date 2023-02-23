@@ -12,6 +12,7 @@
     "clean": "rimraf ./dist",
     "start": "node dist/server.js",
     "dev": "env-cmd -f .env nodemon",
+    "once": "ts-node ./src/index.ts",
     "build": "npm run clean && tsc",
     "test": "env-cmd -f .env jest --config=jest.json",
     "lint": "tslint -p tsconfig.json -c tslint.json 'src/**/*.ts'",
@@ -20,6 +21,7 @@
     "migration:revert": "env-cmd -f .env ts-node ./node_modules/.bin/typeorm migration:revert"
   },
   "dependencies": {
+    "@binance/connector": "^2.0.1",
     "@nestjs/common": "^8.2.3",
     "@nestjs/core": "^8.2.3",
     "@nestjs/platform-express": "^8.2.3",
